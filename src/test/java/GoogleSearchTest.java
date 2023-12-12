@@ -34,9 +34,20 @@ public class GoogleSearchTest {
     public void searchGoogle2(){
         new GoogleSearch(driver)
 
-                .searchGoogle(testdata.getTestData("searchData2"));
+                .searchGoogle(testdata.getTestData("test2.searchData2"));
        new FindFirstResult(driver)
-               . getFirstElementAndValidateIt("WebDriver")
+               . getFirstElementAndValidateIt(testdata.getTestData("test2.firstresult"))
+                .click();
+
+
+    }
+    @Test
+    public void searchGoogle3(){
+        new GoogleSearch(driver)
+
+                .searchGoogle(testdata.getTestData("test3.searchData3"));
+        new FindFirstResult(driver)
+                . getFirstElementAndValidateIt(testdata.getTestData("test3.firstresult"))
                 .click();
 
 
